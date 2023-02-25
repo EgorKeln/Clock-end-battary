@@ -1,0 +1,322 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*::before,*::after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: Arial, Helvetica, sans-serif;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} 
+/*=======================================================================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+    background: #00000078;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper {
+    /*border: 3px solid rgb(0, 191, 255);*/
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.wrapper-clock {
+    /*border: 3px solid red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+.wrapper-battery {
+    /*border: 3px solid red;*/
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    height: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clock {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    border: 4px solid #4c474741;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+                inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+                0 15px 15px rgba(0, 0, 0, 0.3),
+                inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+.dial {
+    width: 235px;
+    height: 235px;
+    border-radius: 50%;
+    background: #4c474741;
+}
+.clock:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #242323;
+    border-radius: 50%;
+    z-index: 10000;
+}
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+.clock .hour, .hr {
+    width: 100px;
+    height: 100px;
+}
+.clock .min, .mn {
+    width: 130px;
+    height: 130px;
+}
+.clock .sec, .sc {
+    width: 190px;
+    height: 190px;
+}
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+.hr:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 60px;
+    background: #c6c8bf;
+    border: 2px solid #000;
+    z-index: 10px;
+    border-radius: 6px 6px 0 0;
+}
+.mn:before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 70px;
+    background: #c6c8bf;
+    border: 2px solid #000;
+    z-index: 11px;
+    border-radius: 6px 6px 0 0;
+}
+.sc:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 115px;
+    background: #d51313;
+    z-index: 12px;
+    border-radius: 6px 6px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --gradient-color-red: linear-gradient(90deg, hsl(7, 89%, 46%) 15%, hsl(11, 93%, 68%) 100%);
+    --gradient-color-orange: linear-gradient(90deg, hsl(22, 89%, 46%) 15%, hsl(54, 90%, 68%) 100%);
+    --gradient-color-yellow: linear-gradient(90deg, hsl(54, 89%, 46%) 15%, hsl(92, 90%, 45%) 100%);
+    --gradient-color-green: linear-gradient(90deg, hsl(92, 89%, 46%) 15%, hsl(92, 90%, 68%) 100%);
+}
+
+.battery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 2px solid #14ed14;*/
+}
+.Bcard {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    position: relative;
+    width: 270px;
+    height: 240px;
+    background: #4c474741;
+    border: 2px solid #000;
+    border-radius: 10px;
+    
+    
+}
+.Bpill {
+    position: relative;
+    width: 75px;
+    height: 180px;
+    background-color: #222;
+    box-shadow: inset 20px 0 48px hsl(0, 0%, 16%), inset -4px 12px 48px hsl(0, 0%, 56%);
+    border-radius: 48px;
+}
+.Blevel {
+    position: absolute;
+    inset: 2px;
+    border-radius: 48px;
+    overflow: hidden;
+}
+.Bliquid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: var(--gradient-color-red);
+    box-shadow: inset -10px 0 12px hsla(0, 0%, 0%, 0.1), inset 12px 0 12px hsla(0, 0%, 0%, 0.15);
+    transition: 0.3s;
+}
+.Bliquid:after {
+    content: '';
+    position: absolute;
+    height: 8px;
+    box-shadow: inset 0 -3px 6px hsla(0, 0%, 0%, 0.2);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -4px;
+    border-radius: 50%;
+}
+.green-color {
+    background: var(--gradient-color-green);
+}
+.animated-green {
+    background: var(--gradient-color-green);
+    animation: animated-charging 1.2s infinite alternate;
+}
+.animated-red {
+    background: var(--gradient-color-red);
+    animation: animated-low 1.2s infinite alternate;
+}
+.animated-green, .animated-red, .green-color {
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@keyframes animated-charging {
+    0% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0 0 6px hsl(92, 90%, 68%);
+    }
+}
+@keyframes animated-low {
+    0% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0 0 8px hsl(7, 89%, 46%);
+    }
+}
+.gradient-color-red, .green-color-red::after {
+    background: var(--gradient-color-red);
+}
+.gradient-color-green, .green-color-green::after {
+    background: var(--gradient-color-green);
+}
+.gradient-color-orange, .green-color-orange::after {
+    background: var(--gradient-color-orange);
+}
+.gradient-color-yellow, .green-color-yellow::after {
+    background: var(--gradient-color-yellow);
+}
+
+.Bdata {
+    color: #fff;
+}
+.Btext {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Bpercentage {
+    font-size: 40px;
+}
+.Bstatus {
+    position: absolute;
+    bottom: 56px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 13px;
+}
+.ri-plug-line {
+    font-size: 20px;
+}
